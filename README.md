@@ -1,7 +1,8 @@
 - 👋 Hi, I’m @mikey-7x
 - 👀 I’m interested in linux distribution and termux based android projects ,i completed electronic and communication (EC) coarse in deploma (BBIT) in india
-- 🌱 I’m currently learning EC (now this year(2025) is my final sem)
-- now at June 2025 i'm trying for admission in BVM college in Gujarat,india
+- 🌱 I’m currently learning lectronics in BVM college
+- here is my repository
+[other repository](https://github.com/mikey-7x?tab=repositories)
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 - 😄 Pronouns: ...
