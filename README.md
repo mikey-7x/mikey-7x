@@ -3,7 +3,7 @@
 I'm a software developer and open-source contributor.
 
 > **Identity notice:**  
-> “mikey-7x” is the online pseudonym of **Yogeshkumar R. Chauhan** (also known as Yogeshkumar R. Chauhan).  
+> “mikey-7x” is the online pseudonym of **Yogesh R. Chauhan** (also known as Chauhan Yogeshkumar R.).  
 > All repositories under this account are authored by the same person unless otherwise noted.
 
 ---
