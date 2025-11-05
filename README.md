@@ -1,12 +1,22 @@
-- 👋 Hi, I’m @mikey-7x
+# Hi, I'm mikey-7x 👋
+
+I'm a software developer and open-source contributor.
+
+> **Identity notice:**  
+> “mikey-7x” is the online pseudonym of **Yogeshkumar R. Chauhan** (also known as Yogeshkumar R. Chauhan).  
+> All repositories under this account are authored by the same person unless otherwise noted.
+
+---
+
 - 👀 I’m interested in linux distribution and termux based android projects ,i completed electronic and communication (EC) coarse in deploma (BBIT) in india
-- 🌱 I’m currently learning ectronics in BVM college
 - here is my repository
 [other repository](https://github.com/mikey-7x?tab=repositories)
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+
+---
+
+### 🧾 Copyright
+© 2025 Yogeshkumar R. Chauhan (mikey-7x).  
+All rights reserved unless stated otherwise in individual project licenses.
 
 <!---
 mikey-7x/mikey-7x is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
