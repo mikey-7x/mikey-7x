@@ -15,7 +15,7 @@ I'm a software developer and open-source contributor.
 ---
 
 ### 🧾 Copyright
-© 2025 Yogeshkumar R. Chauhan (mikey-7x).  
+© 2025 Yogesh R. Chauhan (mikey-7x).  
 All rights reserved unless stated otherwise in individual project licenses.
 
 <!---
