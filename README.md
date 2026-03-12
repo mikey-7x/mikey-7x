@@ -12,7 +12,7 @@ All of my highly-advanced, optimized projects are built on my custom architectur
 **POWERED BY [mikey:hexoid-sys]**
 
 *Notable hexoid-sys Deployments:*
-* [mikey:hexoid v5.0.0] - (https://github.com/mikey-7x/mikey-hexoid-v5.0.0)
+* [mikey:hexoid v5.0.0](https://github.com/mikey-7x/mikey-hexoid-v5.0.0)
 
 >coming soon: * [mikey-7x:ARMKDE] - Ultimate Hardware-Accelerated Linux on Android
 
