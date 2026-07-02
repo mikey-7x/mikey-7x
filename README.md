@@ -28,7 +28,7 @@ I am a software developer with a strong foundation in hardware engineering. My c
 All of my highly-advanced, optimized projects are built on my custom architecture: 
 **POWERED BY `[mikey:hexoid-sys]`**
 
-#### 🚀 Notable hexoid-sys Deployments
+#### 🚀 Notable '[mikey:hexoid-sys]' Deployments
 * 🔗 **[mikey:hexoid v5.0.0](https://github.com/mikey-7x/mikey-hexoid-v5.0.0)** 
 
 #### ⏳ Coming Soon
