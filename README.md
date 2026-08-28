@@ -29,7 +29,8 @@ All of my highly-advanced, optimized projects are built on my custom architectur
 **POWERED BY `[mikey:hexoid-sys]`**
 
 #### 🚀 Notable '[mikey:hexoid-sys]' Deployments
-* 🔗 **[mikey:hexoid v5.0.0](https://github.com/mikey-7x/mikey-hexoid-v5.0.0)** 
+* 🔗 **[mikey:hexoid v5.0.0](https://github.com/mikey-7x/mikey-hexoid-v5.0.0)**
+* 🔗 **[Project-Synapse-v1-official-Real-Time-Brainwave-Decoder-with-Android](https://github.com/mikey-7x/Project-Synapse-v1-official-Real-Time-Brainwave-Decoder-with-Android)
 
 #### ⏳ Coming Soon
 * 🛠️ **`[mikey-7x:xfce4]`** — *Ultimate Hardware-Accelerated Linux on Android*
