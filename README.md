@@ -15,8 +15,8 @@
 <p><b>Architect · software developer · hardware developer</b><br>
 Vulkan capabilities on Android phones — drivers, runtimes and the compatibility layers above them.</p>
 
-<p><code>POWERED BY [mikey:hexoid-sys]</code> — the brand of this owner repository and of three
-projects only.</p>
+<p><code>POWERED BY [mikey:hexoid-sys]</code> — the brand of the advanced builds:<br>
+long research, testing and verification, in three projects only.</p>
 
 </div>
 
@@ -37,10 +37,10 @@ benchmark claims. Where a number appears, the method behind it is published with
 
 <div align="center">
 
-<a href="assets/introduction-poster.pdf"><img src="assets/introduction-poster.png" alt="POWERED BY [mikey:hexoid-sys] — owner repository poster: the brand, the three powered projects, the platform stack and the method" width="660"></a>
+<a href="assets/introduction-poster.pdf"><img src="assets/introduction-poster.png" alt="POWERED BY [mikey:hexoid-sys] — owner repository poster: Vulkan, Snapdragon 8 Gen 3, Adreno 750, Hexagon, Mesa, Turnip, Zink, rusticl, OpenGL, OpenCL, Linux, glibc, bionic, Android, Termux, Termux:X11, Box64, Wine, WoW64 and hardware acceleration" width="660"></a>
 
-<b>Owner repository poster</b> — the brand and its exact scope, the three powered projects,
-the six-layer platform and the method.<br>
+<b>Owner repository poster</b> — twenty relief marks of the tools, drivers, runtimes, silicon
+and libraries the work is built on, with the brand and its scope.<br>
 <a href="assets/introduction-poster.png">PNG</a> ·
 <a href="assets/introduction-poster.pdf">PDF (A2, print)</a>
 
@@ -54,9 +54,14 @@ the six-layer platform and the method.<br>
 
 </div>
 
-`POWERED BY [mikey:hexoid-sys]` is the mark of **this owner repository** and of the **three
-projects listed below — and nothing else**. It is deliberately narrow: the mark is a statement
-that a project carries a complete engineering build, so it is only applied where that is true.
+**Every repository on this account is my own work** — designed, built, tested and documented
+by me. `POWERED BY [mikey:hexoid-sys]` does not mark ownership; it marks **the highly advanced
+projects**: the few where a long period of research, analysis, study and learning came before
+the build, and where the result has been **tested and verified** rather than merely published.
+
+The mark therefore stands for a complete engineering build — the four conditions below — and
+it is deliberately narrow. Utilities, experiments, studies and archives on this account are
+**just as much my creations**; they simply do not carry the mark.
 
 **A repository carries the mark only when all four conditions hold:**
 
@@ -67,12 +72,12 @@ that a project carries a complete engineering build, so it is only applied where
 | 3 | **Reproducible build path** | pinned versions, a scripted install, published checksums |
 | 4 | **Explicit limits and licence** | limits, safety rules and licence in plain language |
 
-**Applied to:** flagship instruments · compiler and toolchain work · biosignal acquisition
-chains.
+**Applied to:** the advanced builds — a compiler and toolchain, a bench instrument, a biosignal
+acquisition chain. Each of them took long research, repeated analysis and a verification pass
+before the mark was applied.
 
-**Not applied to:** utilities, one-liners, experiments, studies and archives — including any
-repository that does not meet all four conditions. Those are published on their own terms and
-are listed under [Other work](#other-work) without the mark.
+**Not applied to:** utilities, one-liners, experiments, studies and archives. They are my work
+as well; they are published under [Other work](#other-work--no-brand) without the mark.
 
 ## Powered projects
 
@@ -133,31 +138,6 @@ four conditions or it does not.
 </tr>
 </table>
 
-## Platform — the stack I work in
-
-| Layer | What it is | Where I work |
-| --- | --- | --- |
-| **Workloads** | Windows, Linux and Android applications | Win32 / Win64 binaries, ELF (glibc), Android (bionic, ART) |
-| **Compatibility & runtime** | layers that translate one world into another | Wine + WoW64, Box64, Termux · PRoot |
-| **Graphics & compute APIs** | what applications are written against | Vulkan, OpenGL / GLES, OpenCL |
-| **Mesa user space** | the drivers behind those APIs | Turnip (Vulkan, Adreno), Zink (OpenGL → Vulkan), rusticl (OpenCL) |
-| **Kernel & libc** | what the drivers stand on | Linux kernel DRM / MSM, scheduler, memory management, glibc vs bionic |
-| **Silicon** | the hardware being addressed | Adreno 750 GPU, Hexagon NPU / DSP, Kryo CPU, Snapdragon 8 Gen 3 |
-
-### Work areas
-
-- **Vulkan on Adreno** — Turnip feature exposure, extension support and validation; version and
-  profile work against what the hardware can hold; memory model, synchronisation and cache
-  behaviour before throughput.
-- **Mesa user space** — Zink (OpenGL on Vulkan), rusticl (OpenCL on Mesa), Gallium state
-  trackers, shader caches, and isolating a driver fault down to a single call.
-- **Kernel and hardware acceleration** — DRM / MSM power, scheduling and buffer handling;
-  Adreno 750 and Hexagon utilisation and offload; where acceleration is real and where it
-  silently falls back.
-- **Platform and compatibility** — Termux and PRoot as the build and run environment, Box64 for
-  x86_64 binaries, Wine + WoW64 for 32-bit Windows software in a 64-bit container, and X11 /
-  Wayland sessions on a phone display.
-
 ## Method
 
 ```text
@@ -172,49 +152,139 @@ four conditions or it does not.
 
 ## Toolchain and platform
 
+Every tool, driver, runtime, library and piece of silicon the work is built on — drawn as a
+relief mark, one per component. The same twenty marks form the poster above and are stored in
+[`assets/toolchain/`](assets/toolchain/) with an [index](assets/toolchain/INDEX.txt).
+
 <div align="center">
 
-<img src="https://img.shields.io/badge/Vulkan-A41E22?style=flat-square&logo=vulkan&logoColor=white" alt="Vulkan">
-<img src="https://img.shields.io/badge/Mesa-1F6F8B?style=flat-square" alt="Mesa">
-<img src="https://img.shields.io/badge/Turnip-Adreno%20Vulkan-2f3640?style=flat-square" alt="Turnip">
-<img src="https://img.shields.io/badge/Zink-GL%20on%20Vulkan-2f3640?style=flat-square" alt="Zink">
-<img src="https://img.shields.io/badge/rusticl-OpenCL-2f3640?style=flat-square" alt="rusticl">
-<img src="https://img.shields.io/badge/OpenGL%20%2F%20GLES-5586A4?style=flat-square&logo=opengl&logoColor=white" alt="OpenGL">
-<img src="https://img.shields.io/badge/Wine%20%2B%20WoW64-7A1F1F?style=flat-square&logo=wine&logoColor=white" alt="Wine + WoW64">
-<img src="https://img.shields.io/badge/Box64-4B5563?style=flat-square" alt="Box64">
-<br>
-<img src="https://img.shields.io/badge/Linux%20kernel-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux kernel">
-<img src="https://img.shields.io/badge/DRM%20%2F%20MSM-2b3138?style=flat-square" alt="DRM / MSM">
-<img src="https://img.shields.io/badge/glibc-A81D33?style=flat-square" alt="glibc">
-<img src="https://img.shields.io/badge/bionic-3DDC84?style=flat-square" alt="bionic">
-<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android">
-<img src="https://img.shields.io/badge/Termux-000000?style=flat-square&logo=gnometerminal&logoColor=white" alt="Termux">
-<img src="https://img.shields.io/badge/PRoot-2b3138?style=flat-square" alt="PRoot">
-<br>
-<img src="https://img.shields.io/badge/Snapdragon%208%20Gen%203-C8102E?style=flat-square&logo=qualcomm&logoColor=white" alt="Snapdragon 8 Gen 3">
-<img src="https://img.shields.io/badge/Adreno%20750-C8102E?style=flat-square" alt="Adreno 750">
-<img src="https://img.shields.io/badge/Hexagon%20NPU-C8102E?style=flat-square" alt="Hexagon NPU">
-<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" alt="C">
-<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
-<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash">
-<br>
-<img src="https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white" alt="STM32">
-<img src="https://img.shields.io/badge/AVR-A5C43D?style=flat-square&logo=arduino&logoColor=white" alt="AVR">
-<img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32">
-<img src="https://img.shields.io/badge/RP2040-A22846?style=flat-square&logo=raspberrypi&logoColor=white" alt="RP2040">
-<img src="https://img.shields.io/badge/Verilog-8A2BE2?style=flat-square&logo=v&logoColor=white" alt="Verilog">
-<img src="https://img.shields.io/badge/Yosys-1B4D3E?style=flat-square&logo=verilog&logoColor=white" alt="Yosys">
-<img src="https://img.shields.io/badge/KiCad-314CB0?style=flat-square&logo=kicad&logoColor=white" alt="KiCad">
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="assets/toolchain/01-vulkan.png" width="96" alt="Vulkan"><br>
+<b>Vulkan</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/02-snapdragon.png" width="96" alt="Snapdragon 8 Gen 3"><br>
+<b>Snapdragon 8 Gen 3</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/03-adreno.png" width="96" alt="Adreno 750"><br>
+<b>Adreno 750</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/04-hexagon.png" width="96" alt="Hexagon NPU"><br>
+<b>Hexagon NPU</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/05-mesa.png" width="96" alt="Mesa"><br>
+<b>Mesa</b>
+</td>
+</tr>
+<tr>
+<td align="center" width="20%">
+<img src="assets/toolchain/06-turnip.png" width="96" alt="Turnip"><br>
+<b>Turnip</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/07-zink.png" width="96" alt="Zink"><br>
+<b>Zink</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/08-rusticl.png" width="96" alt="rusticl"><br>
+<b>rusticl</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/09-opengl.png" width="96" alt="OpenGL / GLES"><br>
+<b>OpenGL / GLES</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/10-opencl.png" width="96" alt="OpenCL"><br>
+<b>OpenCL</b>
+</td>
+</tr>
+<tr>
+<td align="center" width="20%">
+<img src="assets/toolchain/11-linux.png" width="96" alt="Linux kernel"><br>
+<b>Linux kernel</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/12-glibc.png" width="96" alt="glibc"><br>
+<b>glibc</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/13-bionic.png" width="96" alt="bionic"><br>
+<b>bionic</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/14-android.png" width="96" alt="Android"><br>
+<b>Android</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/15-termux.png" width="96" alt="Termux"><br>
+<b>Termux</b>
+</td>
+</tr>
+<tr>
+<td align="center" width="20%">
+<img src="assets/toolchain/16-termux_x11.png" width="96" alt="Termux:X11"><br>
+<b>Termux:X11</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/17-box64.png" width="96" alt="Box64"><br>
+<b>Box64</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/18-wine.png" width="96" alt="Wine"><br>
+<b>Wine</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/19-wow64.png" width="96" alt="WoW64"><br>
+<b>WoW64</b>
+</td>
+<td align="center" width="20%">
+<img src="assets/toolchain/20-accel.png" width="96" alt="Hardware acceleration"><br>
+<b>Hardware acceleration</b>
+</td>
+</tr>
+</table>
 
 </div>
 
+**The emblems are original stylised symbols drawn for this repository** by
+`tools/emblems.py` — not vendor artwork. They identify the components; they do not imply
+affiliation or endorsement by the projects named.
+
+### Layers, in order
+
+| Layer | Components | Where I work |
+| --- | --- | --- |
+| **Workloads** | Windows, Linux and Android applications | Win32 / Win64 binaries, ELF (glibc), Android (bionic, ART) |
+| **Compatibility & runtime** | Wine + WoW64 · Box64 · Termux · Termux:X11 · PRoot | 32- and 64-bit Windows software, x86_64 → ARM64, a Linux user space on the phone |
+| **Graphics & compute APIs** | Vulkan · OpenGL / GLES · OpenCL | explicit GPU work, legacy and mobile 3D, compute kernels |
+| **Mesa user space** | Turnip · Zink · rusticl | Adreno Vulkan, OpenGL on Vulkan, OpenCL on Mesa |
+| **Kernel & libc** | Linux kernel (DRM / MSM) · glibc · bionic | power, scheduling, buffer handling, two C libraries on one kernel |
+| **Silicon** | Snapdragon 8 Gen 3 · Adreno 750 · Hexagon NPU | GPU and NPU offload, hardware acceleration |
+
+### Work areas
+
+- **Vulkan on Adreno** — Turnip feature exposure, extension support and validation; version and
+  profile work against what the hardware can hold; memory model, synchronisation and cache
+  behaviour before throughput.
+- **Mesa user space** — Zink (OpenGL on Vulkan), rusticl (OpenCL on Mesa), Gallium state
+  trackers, shader caches, and isolating a driver fault down to a single call.
+- **Kernel and hardware acceleration** — DRM / MSM power, scheduling and buffer handling;
+  Adreno 750 and Hexagon utilisation and offload; where acceleration is real and where it
+  silently falls back.
+- **Platform and compatibility** — Termux and Termux:X11 for a Linux user space and a desktop on
+  the phone, Box64 for x86_64 binaries, Wine + WoW64 for 32-bit Windows software in a 64-bit
+  container.
+
 ## Other work — no brand
 
-These repositories are published on their own terms as utilities, experiments, studies and
-archives. **They do not carry `POWERED BY [mikey:hexoid-sys]`.**
+These repositories are **my own work as well** — published on their own terms as utilities,
+experiments, studies and archives. They do not carry `POWERED BY [mikey:hexoid-sys]`, because
+the mark is reserved for the advanced builds described above.
 
 | Area | Repositories |
 | --- | --- |
