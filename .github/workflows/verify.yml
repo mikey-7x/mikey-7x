@@ -1,0 +1,18 @@
+name: Profile checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify identity, licence, images and checksums
+        run: python3 tools/verify_profile.py
