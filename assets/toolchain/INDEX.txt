@@ -1,0 +1,24 @@
+Toolchain emblems — original stylised symbols drawn by tools/emblems.py.
+POWERED BY [mikey:hexoid-sys] — Copyright (c) 2026 mikey-7x. All rights reserved.
+
+file	label	note
+01-vulkan.png	Vulkan	explicit GPU API
+02-snapdragon.png	Snapdragon 8 Gen 3	target SoC
+03-adreno.png	Adreno 750	GPU
+04-hexagon.png	Hexagon NPU	DSP · inference
+05-mesa.png	Mesa	driver framework
+06-turnip.png	Turnip	Adreno Vulkan driver
+07-zink.png	Zink	OpenGL on Vulkan
+08-rusticl.png	rusticl	OpenCL on Mesa
+09-opengl.png	OpenGL / GLES	3D graphics API
+10-opencl.png	OpenCL	compute API
+11-linux.png	Linux kernel	DRM / MSM · scheduler
+12-glibc.png	glibc	Linux C library
+13-bionic.png	bionic	Android C library
+14-android.png	Android	target platform
+15-termux.png	Termux	Linux user space
+16-termux_x11.png	Termux:X11	desktop on the phone
+17-box64.png	Box64	x86_64 → ARM64
+18-wine.png	Wine	Windows applications
+19-wow64.png	WoW64	32-bit in 64-bit
+20-accel.png	Hardware acceleration	GPU + NPU offload
