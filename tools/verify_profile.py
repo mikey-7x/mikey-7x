@@ -49,15 +49,19 @@ check("README carries the credit", "Created by mikey-7x" in readme)
 check("README shows the poster", "assets/introduction-poster.png" in readme)
 check("README links the poster PDF", "assets/introduction-poster.pdf" in readme)
 check("README scopes the identity", "not applied to" in readme.lower()
-      and "flagship" in readme.lower())
+      and "advanced" in readme.lower())
 for needle, name in (("vulkan", "Vulkan"), ("turnip", "Turnip"), ("zink", "Zink"),
                      ("rusticl", "rusticl"), ("mesa", "Mesa"), ("wow64", "WoW64"),
                      ("box64", "Box64"), ("termux", "Termux"), ("snapdragon 8 gen 3", "Snapdragon 8 Gen 3"),
                      ("adreno 750", "Adreno 750"), ("hexagon", "Hexagon NPU"), ("glibc", "glibc"),
                      ("bionic", "bionic"), ("kernel", "kernel"), ("npu", "NPU")):
     check(f"README covers the stack: {name}", needle in readme.lower())
+check("README states the brand does not mark ownership",
+      "does not mark ownership" in readme)
+check("README states all work is the author's own",
+      "every repository on this account is my own work" in readme.lower())
 check("README scopes the brand to three projects",
-      "three" in readme.lower() and "and nothing else" in readme)
+      "three" in readme.lower() and "advanced" in readme.lower())
 for repo in ("mikey-hexoid-v5.0.0",
              "298.666mhz-frequency-counter-using-stm32f103c8t6-and-vhf-uhf-fm-transmitter-circuit",
              "Project-Synapse-v1-official-Real-Time-Brainwave-Decoder-with-Android"):
@@ -66,7 +70,8 @@ for condition in ("Documented architecture", "Measured or checkable results",
                   "Reproducible build path", "Explicit limits and licence"):
     check(f"README states a brand condition: {condition}", condition in readme)
 check("README marks the other work as unbranded", "Other work — no brand" in readme)
-check("README keeps the not-every-repository rule", "does not meet all four" in readme)
+check("README keeps the not-every-repository rule",
+      "they do not carry" in readme.lower() and "own work" in readme.lower())
 check("README contact: email", "chauhanyogesh9825@gmail.com" in readme)
 check("README contact: YouTube", "youtube.com/@mikey-7x" in readme)
 check("README contact: blog", "rtod-yv8.blogspot.com" in readme)
