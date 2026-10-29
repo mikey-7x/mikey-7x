@@ -16,7 +16,7 @@
 Vulkan capabilities on Android phones — drivers, runtimes and the compatibility layers above them.</p>
 
 <p><code>POWERED BY [mikey:hexoid-sys]</code> — the brand of the advanced builds:<br>
-long research, testing and verification , advance tools & structures </p>
+long research, testing and verification — advanced tools and structures.</p>
 
 </div>
 
