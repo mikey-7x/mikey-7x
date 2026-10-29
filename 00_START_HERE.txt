@@ -1,0 +1,75 @@
+MIKEY-7X - PROFILE README UPGRADE
+POWERED BY [mikey:hexoid-sys]
+Copyright (c) 2026 mikey-7x. All rights reserved.
+
+WHAT THIS REPLACES
+------------------
+Your current profile README is 2.8 KB: a greeting, an identity note with your
+personal name, two repository links, four shield badges and a copyright line.
+
+This package replaces it with a full profile: banner, identity section, featured
+project cards, toolchain wall, a "how I work" block, a categorised index of your
+33 repositories, a licence section and the required credit block.
+
+WHAT IS IN THE PACKAGE (12 files)
+---------------------------------
+README.md                                new profile page
+LICENSE                                  strict personal & educational licence for the profile
+NOTICE.md                                identity + third-party trademark notice
+assets/profile-banner.png                1600 x 400 header banner (NEW)
+assets/powered-by-mikey-hexoid-sys.png   silver hero mark
+assets/powered-by-mikey-hexoid-sys.svg   vector hero mark
+assets/mikey-hexoid-sys-mark.png         square mark
+assets/mikey-hexoid-sys-mark.svg         vector square mark
+assets/README.md                         asset guide + regeneration command
+assets/SHA256SUMS                        checksums of all five images
+tools/make_banner.py                     deterministic banner generator
+tools/verify_profile.py                  offline self-check (49/49 passing)
+.github/workflows/verify.yml             CI check on every push
+.gitattributes, .gitignore               line endings and ignores
+
+NOTE ON NAMES
+-------------
+Your personal name has been removed everywhere, per your instruction: only
+"mikey-7x" (short form "mikey") is used. The verifier fails if a personal name
+ever reappears in a published file.
+
+HOW TO UPLOAD (GitHub website)
+------------------------------
+1. Open https://github.com/mikey-7x/mikey-7x
+2. "Add file" -> "Upload files".
+   Batch A - root: README.md, LICENSE, NOTICE.md
+   Batch B - assets/: the five images + README.md + SHA256SUMS
+            (open the assets folder area by typing assets/ in the file name box
+             when using "Create new file", or drag the files while the uploader
+             shows the repository root and keep the assets/ prefix)
+   Batch C - tools/: make_banner.py, verify_profile.py
+   Batch D - .github/: use "Add file" -> "Create new file" and type the full
+            path each time:  .github/workflows/verify.yml
+            then paste the content. Do the same for .gitattributes and
+            .gitignore at the repository root.
+3. Commit directly to main.
+4. Open the Actions tab: "Profile checks" should pass on the first run.
+
+EASIEST OPTION FOR MANY FILES ON A PHONE
+----------------------------------------
+"Add file" -> "Upload files" accepts multiple files at once. Upload the images
+together, then the markdown files together, then create the two dotfiles and the
+workflow with "Create new file" and the full path typed in the name box.
+
+AFTER UPLOAD - PROFILE POLISH (optional but recommended)
+--------------------------------------------------------
+Your profile card currently shows a personal name in the Name field, an empty
+bio and a city-level location.
+Suggestions using only the public identity:
+  Name:     mikey-7x
+  Bio:      Embedded systems, tooling and Linux on mobile. POWERED BY [mikey:hexoid-sys]
+  Website:  https://github.com/mikey-7x?tab=repositories
+  Location: leave as is, or "India"
+Settings -> Profile -> Save. If you want the account fully pseudonymous, clear
+the Name field so only the handle mikey-7x is shown.
+
+CHECKPOINT
+----------
+Repository self-check: 49/49 passed. GitHub Actions runs the same check on push.
+Every image referenced by README.md exists; all five checksums match.
