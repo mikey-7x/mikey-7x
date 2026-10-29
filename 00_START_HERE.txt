@@ -1,75 +1,76 @@
-MIKEY-7X - PROFILE README UPGRADE
-POWERED BY [mikey:hexoid-sys]
-Copyright (c) 2026 mikey-7x. All rights reserved.
+MIKEY-7X - OWNER REPOSITORY (VERSION 4)
+POWERED BY [mikey:hexoid-sys] - Copyright (c) 2026 mikey-7x. All rights reserved.
 
-WHAT THIS REPLACES
-------------------
-Your current profile README is 2.8 KB: a greeting, an identity note with your
-personal name, two repository links, four shield badges and a copyright line.
+WHAT CHANGED IN VERSION 4
+-------------------------
+1. New design language: matte black, silver type, hairline rules, no icons.
+   Everything is drawn by tools/poster_kit.py, the shared design system.
+2. The poster is now an owner-repository brand sheet: the brand and its exact
+   scope, the three powered projects with their real subsystems, the six-layer
+   platform stack and the method.
+3. The banner was redrawn in the same language.
+4. The README states the brand scope exactly: this owner repository plus the
+   three powered projects, and nothing else, with the four conditions a
+   repository must meet. Everything else is listed under "Other work - no
+   brand".
+5. NOTICE.md and the asset guide carry the same exact list.
 
-This package replaces it with a full profile: banner, identity section, featured
-project cards, toolchain wall, a "how I work" block, a categorised index of your
-33 repositories, a licence section and the required credit block.
-
-WHAT IS IN THE PACKAGE (12 files)
+WHAT IS IN THE PACKAGE (17 files)
 ---------------------------------
-README.md                                new profile page
-LICENSE                                  strict personal & educational licence for the profile
-NOTICE.md                                identity + third-party trademark notice
-assets/profile-banner.png                1600 x 400 header banner (NEW)
+README.md                                new profile page (poster embedded)
+LICENSE                                  strict personal & educational licence
+NOTICE.md                                identity scope, contact and trademark notice
+assets/profile-banner.png                1600 x 400 header banner
+assets/introduction-poster.png           A2 owner poster, 2481 x 3508
+assets/introduction-poster.pdf           same poster, print/vector
 assets/powered-by-mikey-hexoid-sys.png   silver hero mark
 assets/powered-by-mikey-hexoid-sys.svg   vector hero mark
 assets/mikey-hexoid-sys-mark.png         square mark
 assets/mikey-hexoid-sys-mark.svg         vector square mark
-assets/README.md                         asset guide + regeneration command
-assets/SHA256SUMS                        checksums of all five images
+assets/README.md                         asset guide + regeneration commands
+assets/SHA256SUMS                        checksums of all seven images
 tools/make_banner.py                     deterministic banner generator
-tools/verify_profile.py                  offline self-check (49/49 passing)
+tools/make_poster.py                     deterministic poster generator
+tools/poster_kit.py                      shared design system (colour, type, grids)
+tools/verify_profile.py                  offline self-check (90/90 passing)
 .github/workflows/verify.yml             CI check on every push
 .gitattributes, .gitignore               line endings and ignores
 
 NOTE ON NAMES
 -------------
-Your personal name has been removed everywhere, per your instruction: only
-"mikey-7x" (short form "mikey") is used. The verifier fails if a personal name
-ever reappears in a published file.
+The author identity is only "mikey-7x" (short form "mikey"). The only place a
+personal name appears is inside the contact lines you asked to publish:
+  chauhanyogesh9825@gmail.com
+  https://www.linkedin.com/in/yogesh-r-chauhan-780005417
+The self-check allows exactly those two strings and fails if any other personal
+name appears in a published file.
 
-HOW TO UPLOAD (GitHub website)
-------------------------------
+HOW TO UPLOAD (GitHub website, on Android)
+------------------------------------------
 1. Open https://github.com/mikey-7x/mikey-7x
-2. "Add file" -> "Upload files".
-   Batch A - root: README.md, LICENSE, NOTICE.md
-   Batch B - assets/: the five images + README.md + SHA256SUMS
-            (open the assets folder area by typing assets/ in the file name box
-             when using "Create new file", or drag the files while the uploader
-             shows the repository root and keep the assets/ prefix)
-   Batch C - tools/: make_banner.py, verify_profile.py
-   Batch D - .github/: use "Add file" -> "Create new file" and type the full
-            path each time:  .github/workflows/verify.yml
-            then paste the content. Do the same for .gitattributes and
-            .gitignore at the repository root.
-3. Commit directly to main.
-4. Open the Actions tab: "Profile checks" should pass on the first run.
+2. Tap "Add file", then "Upload files".
+3. Batch A - root files: README.md, LICENSE, NOTICE.md, .gitattributes,
+   .gitignore. (Dotfiles are easier with method in step 5.)
+4. Batch B - assets: profile-banner.png, introduction-poster.png,
+   introduction-poster.pdf, powered-by-mikey-hexoid-sys.png,
+   powered-by-mikey-hexoid-sys.svg, mikey-hexoid-sys-mark.png,
+   mikey-hexoid-sys-mark.svg, README.md, SHA256SUMS.
+   Type "assets/" in the file-name box, then drag the files in.
+5. Batch C - tools: make_banner.py, make_poster.py, verify_profile.py.
+   Type "tools/" in the file-name box first.
+6. Dotfiles and workflow - tap "Add file", then "Create new file", and type the
+   full path in the name box:
+     .gitattributes
+     .gitignore
+     .github/workflows/verify.yml
+   Paste the content of each file, then tap "Commit changes".
+7. Commit directly to main.
+8. Open the "Actions" tab. The "Profile checks" run should be green.
 
-EASIEST OPTION FOR MANY FILES ON A PHONE
-----------------------------------------
-"Add file" -> "Upload files" accepts multiple files at once. Upload the images
-together, then the markdown files together, then create the two dotfiles and the
-workflow with "Create new file" and the full path typed in the name box.
-
-AFTER UPLOAD - PROFILE POLISH (optional but recommended)
---------------------------------------------------------
-Your profile card currently shows a personal name in the Name field, an empty
-bio and a city-level location.
-Suggestions using only the public identity:
-  Name:     mikey-7x
-  Bio:      Embedded systems, tooling and Linux on mobile. POWERED BY [mikey:hexoid-sys]
-  Website:  https://github.com/mikey-7x?tab=repositories
-  Location: leave as is, or "India"
-Settings -> Profile -> Save. If you want the account fully pseudonymous, clear
-the Name field so only the handle mikey-7x is shown.
+If an old file already exists, upload the new version over it - the poster files
+are new, the rest are replacements.
 
 CHECKPOINT
 ----------
-Repository self-check: 49/49 passed. GitHub Actions runs the same check on push.
-Every image referenced by README.md exists; all five checksums match.
+Repository self-check: 90/90 passed.
+Every image referenced by README.md exists; all seven checksums match.
