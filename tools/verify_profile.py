@@ -5,7 +5,7 @@ POWERED BY [mikey:hexoid-sys] - Copyright (c) 2026 mikey-7x. All rights reserved
 
 Verifies the expected files, the required identity lines, licence terms, asset
 checksums, that every local image referenced by README.md exists, and that no
-personal name leaked into the presentation.
+personal name leaked into the presentation outside the approved contact lines.
 """
 from __future__ import annotations
 
@@ -32,7 +32,9 @@ REQUIRED = [
     "assets/profile-banner.png", "assets/powered-by-mikey-hexoid-sys.png",
     "assets/powered-by-mikey-hexoid-sys.svg", "assets/mikey-hexoid-sys-mark.png",
     "assets/mikey-hexoid-sys-mark.svg", "assets/README.md", "assets/SHA256SUMS",
-    "tools/make_banner.py", "tools/verify_profile.py",
+    "assets/introduction-poster.png", "assets/introduction-poster.pdf",
+    "tools/make_banner.py", "tools/make_poster.py", "tools/poster_kit.py",
+    "tools/verify_profile.py",
     ".github/workflows/verify.yml",
 ]
 for rel in REQUIRED:
@@ -44,6 +46,31 @@ check("README shows the hero logo", "assets/powered-by-mikey-hexoid-sys.png" in 
 check("README shows the square mark", "assets/mikey-hexoid-sys-mark.png" in readme)
 check("README carries the identity line", BRAND in readme)
 check("README carries the credit", "Created by mikey-7x" in readme)
+check("README shows the poster", "assets/introduction-poster.png" in readme)
+check("README links the poster PDF", "assets/introduction-poster.pdf" in readme)
+check("README scopes the identity", "not applied to" in readme.lower()
+      and "flagship" in readme.lower())
+for needle, name in (("vulkan", "Vulkan"), ("turnip", "Turnip"), ("zink", "Zink"),
+                     ("rusticl", "rusticl"), ("mesa", "Mesa"), ("wow64", "WoW64"),
+                     ("box64", "Box64"), ("termux", "Termux"), ("snapdragon 8 gen 3", "Snapdragon 8 Gen 3"),
+                     ("adreno 750", "Adreno 750"), ("hexagon", "Hexagon NPU"), ("glibc", "glibc"),
+                     ("bionic", "bionic"), ("kernel", "kernel"), ("npu", "NPU")):
+    check(f"README covers the stack: {name}", needle in readme.lower())
+check("README scopes the brand to three projects",
+      "three" in readme.lower() and "and nothing else" in readme)
+for repo in ("mikey-hexoid-v5.0.0",
+             "298.666mhz-frequency-counter-using-stm32f103c8t6-and-vhf-uhf-fm-transmitter-circuit",
+             "Project-Synapse-v1-official-Real-Time-Brainwave-Decoder-with-Android"):
+    check(f"README links a powered project: {repo[:34]}", repo in readme)
+for condition in ("Documented architecture", "Measured or checkable results",
+                  "Reproducible build path", "Explicit limits and licence"):
+    check(f"README states a brand condition: {condition}", condition in readme)
+check("README marks the other work as unbranded", "Other work — no brand" in readme)
+check("README keeps the not-every-repository rule", "does not meet all four" in readme)
+check("README contact: email", "chauhanyogesh9825@gmail.com" in readme)
+check("README contact: YouTube", "youtube.com/@mikey-7x" in readme)
+check("README contact: blog", "rtod-yv8.blogspot.com" in readme)
+check("README contact: LinkedIn", "linkedin.com/in/yogesh-r-chauhan-780005417" in readme)
 check("README links the repositories tab", "tab=repositories" in readme)
 check("README uses the mikey-7x name only", "mikey-7x" in readme)
 check("README has no placeholder text",
@@ -71,17 +98,25 @@ if sums.is_file():
         actual = hashlib.sha256(target.read_bytes()).hexdigest() if target.is_file() else ""
         check(f"asset checksum: {name.strip()}", actual == digest)
         listed += 1
-    check("asset checksum list is complete", listed == 5, f"listed {listed}")
+    check("asset checksum list is complete", listed == 7, f"listed {listed}")
 
-# no personal name anywhere in the published presentation
+# no personal name anywhere in the published presentation, except inside the
+# approved contact strings the author chose to publish (email and LinkedIn URL)
+APPROVED_CONTACTS = ("chauhanyogesh9825@gmail.com", "yogesh-r-chauhan-780005417")
+PERSONAL = ("yogesh", "chauhan", "9512")
+
 for path in sorted(ROOT.rglob("*")):
     if not path.is_file() or path.suffix.lower() not in {".md", ".py", ".yml", ".cff", ".txt", ".svg", ""}:
         continue
     if path.name in {"verify_profile.py", "00_START_HERE.txt"}:
         continue
-    low = path.read_text(encoding="utf-8", errors="replace").lower()
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for approved in APPROVED_CONTACTS:
+        text = text.replace(approved, "<approved-contact>")
+        text = text.replace(approved.replace("-", "\u2011"), "<approved-contact>")
+    low = text.lower()
     check(f"no personal name in {path.relative_to(ROOT).as_posix()}",
-          not any(n in low for n in ("yogesh", "chauhan", "9825", "9512")))
+          not any(n in low for n in PERSONAL))
 
 total = len(PASSED) + len(FAILED)
 print(f"Profile verification: {len(PASSED)}/{total} passed")
