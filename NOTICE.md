@@ -42,7 +42,6 @@ Only the contact points listed below are official. No postal address or telephon
 published.
 
 ```text
-Email     chauhanyogesh9825@gmail.com
 GitHub    https://github.com/mikey-7x
 YouTube   https://youtube.com/@mikey-7x
 Blog      https://rtod-yv8.blogspot.com/?m=1
