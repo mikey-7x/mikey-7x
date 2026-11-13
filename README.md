@@ -313,7 +313,7 @@ the mark is reserved for the advanced builds described above.
 
 | | |
 | --- | --- |
-| **Email** | [chauhanyogesh9825@gmail.com](mailto:chauhanyogesh9825@gmail.com) |
+| **Email** | [chauhanyogesh9825@gmail.com](mailto:chauhanyogesh9512@gmail.com) |
 | **GitHub** | [github.com/mikey-7x](https://github.com/mikey-7x) |
 | **YouTube** | [youtube.com/@mikey-7x](https://youtube.com/@mikey-7x) |
 | **Blog** | [rtod-yv8.blogspot.com](https://rtod-yv8.blogspot.com/?m=1) |
