@@ -121,8 +121,7 @@ def build(target=OUT / "introduction-poster.png"):
 
     # ------------------------------------------------------------- footer --
     K.footer(img, M, 3210, CW,
-             contacts=[("EMAIL", "chauhanyogesh9825@gmail.com"),
-                       ("GITHUB", "github.com/mikey-7x"),
+             contacts=[                       ("GITHUB", "github.com/mikey-7x"),
                        ("YOUTUBE", "youtube.com/@mikey-7x"),
                        ("BLOG", "rtod-yv8.blogspot.com/?m=1"),
                        ("LINKEDIN", "linkedin.com/in/yogesh-r-chauhan-780005417")],

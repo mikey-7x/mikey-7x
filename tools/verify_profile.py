@@ -16,6 +16,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BRAND = "POWERED BY [mikey:hexoid-sys]"
+# no email address may be published anywhere in this repository
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
 PASSED, FAILED = [], []
 
 
@@ -72,7 +74,7 @@ for condition in ("Documented architecture", "Measured or checkable results",
 check("README marks the other work as unbranded", "Other work — no brand" in readme)
 check("README keeps the not-every-repository rule",
       "they do not carry" in readme.lower() and "own work" in readme.lower())
-check("README contact: email", "chauhanyogesh9825@gmail.com" in readme)
+check("README publishes no email address", not EMAIL_RE.search(readme))
 check("README contact: YouTube", "youtube.com/@mikey-7x" in readme)
 check("README contact: blog", "rtod-yv8.blogspot.com" in readme)
 check("README contact: LinkedIn", "linkedin.com/in/yogesh-r-chauhan-780005417" in readme)
@@ -105,9 +107,9 @@ if sums.is_file():
         listed += 1
     check("asset checksum list is complete", listed == 7, f"listed {listed}")
 
-# no personal name anywhere in the published presentation, except inside the
-# approved contact strings the author chose to publish (email and LinkedIn URL)
-APPROVED_CONTACTS = ("chauhanyogesh9825@gmail.com", "yogesh-r-chauhan-780005417")
+# no email address is published anywhere, and no personal name appears outside
+# the one approved contact string the author chose to keep (the LinkedIn URL)
+APPROVED_CONTACTS = ("yogesh-r-chauhan-780005417",)
 PERSONAL = ("yogesh", "chauhan", "9512")
 
 for path in sorted(ROOT.rglob("*")):
@@ -122,6 +124,8 @@ for path in sorted(ROOT.rglob("*")):
     low = text.lower()
     check(f"no personal name in {path.relative_to(ROOT).as_posix()}",
           not any(n in low for n in PERSONAL))
+    check(f"no email address in {path.relative_to(ROOT).as_posix()}",
+          not EMAIL_RE.search(path.read_text(encoding="utf-8", errors="replace")))
 
 total = len(PASSED) + len(FAILED)
 print(f"Profile verification: {len(PASSED)}/{total} passed")
