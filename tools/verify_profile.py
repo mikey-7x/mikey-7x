@@ -112,7 +112,11 @@ if sums.is_file():
 APPROVED_CONTACTS = ("yogesh-r-chauhan-780005417",)
 PERSONAL = ("yogesh", "chauhan", "9512")
 
+SKIP_PARTS = {".git", "__pycache__", ".venv", "node_modules"}
+
 for path in sorted(ROOT.rglob("*")):
+    if any(part in SKIP_PARTS or part.startswith(".git") for part in path.relative_to(ROOT).parts):
+        continue  # never scan version-control metadata or caches
     if not path.is_file() or path.suffix.lower() not in {".md", ".py", ".yml", ".cff", ".txt", ".svg", ""}:
         continue
     if path.name in {"verify_profile.py", "00_START_HERE.txt"}:
